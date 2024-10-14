@@ -1,0 +1,165 @@
+/* InvestmentCard.css */
+
+.investment-card {
+  width: 300px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid var(--soft-color);
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.investment-card__logo {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--soft-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.investment-card__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.investment-card__image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.investment-card__like {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 10;
+}
+
+.like-button {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.like-button svg {
+  color: var(--red-color);
+  width: 20px;
+  height: 20px;
+}
+
+.like-button.liked svg {
+  color: var(--red-color);
+}
+
+.investment-card__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.investment-card__info-item {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.investment-card__info-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  border-right: 1px solid #ccc;
+}
+
+.investment-card__info-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.investment-card__info-label {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 2px;
+}
+
+.investment-card__title {
+  color: var(--txtMain-color);
+  margin-bottom: 10px;
+}
+
+.investment-card__description,
+.investment-card__about {
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.investment-card__about {
+  margin-bottom: 15px;
+  color: #777;
+}
+
+.investment-card__progress {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.investment-card__user-investment {
+  margin-top: auto;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-top: 2px solid #39958c;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.investment-card__user-investment .investment-amount {
+  text-align: center;
+}
+
+.investment-card__user-investment .amount {
+  font-size: 24px;
+  font-weight: bold;
+  color: #39958c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.investment-card__user-investment .label {
+  font-size: 14px;
+  color: #728f9e;
+  text-transform: uppercase;
+}
+
+/* Adjust the container of the cards */
+.all-investments__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}

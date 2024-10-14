@@ -1,0 +1,125 @@
+/* CompanyDocs.css */
+
+.docs-container {
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.docs-title {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.document-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.document-card {
+  width: 120px;
+  height: 160px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  overflow: visible;
+}
+
+.document-card:hover {
+  background-color: #e2e3e5;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.document-card img.document-icon {
+  width: 40px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.document-card .title {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444648;
+}
+
+.document-preview {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  height: auto;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.document-card:hover .document-preview {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  top: calc(100% + 10px);
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .docs-container {
+    padding: 0 10px;
+  }
+
+  .document-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .document-card {
+    width: calc(50% - 15px);
+    max-width: 100px;
+    height: 140px;
+  }
+
+  .document-card .title {
+    font-size: 0.9rem;
+  }
+
+  .document-preview {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .document-card {
+    width: calc(100% - 15px);
+    max-width: 120px;
+  }
+
+  .document-preview {
+    display: none; /* Hide preview on very small screens */
+  }
+}

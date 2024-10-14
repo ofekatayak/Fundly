@@ -1,0 +1,107 @@
+.stat-card {
+  background-color: var(--primary-color);
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-value {
+  transform: scale(1.1);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover .stat-label {
+  opacity: 0.8;
+}
+
+.stat-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    transparent 20%,
+    var(--primary-color) 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover .stat-background {
+  opacity: 1;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stats-container > * {
+  margin: 1rem;
+  flex: 1 1 200px;
+  max-width: 250px;
+}
+
+/* Keyframe animation for card appearance */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card {
+  animation: cardAppear 0.5s ease-out forwards;
+}
+
+/* Stagger the appearance of multiple cards */
+.stats-container > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stats-container > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stats-container > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stats-container > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* For RTL support */
+[dir='rtl'] .stats-container {
+  flex-direction: row-reverse;
+}

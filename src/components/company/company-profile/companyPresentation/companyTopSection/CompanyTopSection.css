@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bgGray-color);
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.company-top-section1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.investment-card1 {
+  display: flex;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  margin: 10px auto;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.investment-card1:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.left-side {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.investment-card__image1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.investment-card__image1 img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.investment-card__image1:hover img {
+  transform: scale(1.05);
+}
+
+.investment-card__progress-content1 {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.investment-card__progress-bar1 {
+  position: relative;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  height: 20px;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+
+.investment-card__progress-bar1 div {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.investment-card__investment1 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.investment-card__content1 {
+  flex: 2;
+  padding: 20px;
+}
+
+.investment-card__header1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.investment-card__logo1 {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.investment-card__logo1:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.investment-card__title1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  color: var(--txtSoftBlack-color);
+  transition: color 0.3s ease;
+}
+
+.investment-card__title1:hover {
+  color: var(--primary-color);
+}
+
+.investment-card__badge1 {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 12px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.investment-card__badge1:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.investment-card__description1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #7f7f7f;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: justify;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease-out 0.3s forwards;
+}
+
+.investment-card__progress-text1 {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--bg-color);
+  transition: transform 0.3s ease;
+}
+
+.investment-card__progress-bar1:hover .investment-card__progress-text1 {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.investment-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.investment-amount:hover {
+  transform: scale(1.1);
+}
+
+.already-invested-text {
+  font-size: 0.99rem;
+  color: var(--txtMain-color);
+  font-weight: normal;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.already-invested-text:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .investment-card1 {
+    flex-direction: column;
+  }
+
+  .investment-card__image1,
+  .investment-card__content1 {
+    padding: 10px;
+  }
+
+  .investment-card__image1 img {
+    width: 100%;
+  }
+}

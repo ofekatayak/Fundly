@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.value-button {
+  padding: 10px;
+  border: 2px solid #a9a9a9;
+  border-color: var(--soft-color);
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  color: black;
+  flex: 1 0 20%;
+}
+
+.value-button.selected {
+  background-color: var(--soft-color);
+  border-color: var(--primary-color);
+  color: black;
+}
+
+.value-button:hover {
+  background-color: var(--soft-color);
+}

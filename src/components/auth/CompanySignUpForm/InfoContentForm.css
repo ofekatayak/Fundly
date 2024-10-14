@@ -1,0 +1,4 @@
+.info-content-form label {
+  margin-bottom: 20px;
+  display: block; /* Ensures the label takes up the full width and the margin applies as expected */
+}

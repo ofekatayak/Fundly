@@ -1,0 +1,148 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header__logo img {
+  height: 50px;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__button {
+  max-width: 200px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: white;
+  cursor: pointer;
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.header_button--fill {
+  padding: 8px 10px;
+  background-color: var(--primary-color);
+  font-size: 18px;
+  border: none;
+}
+
+.header_button--border {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-size: 18px;
+}
+
+.header__button:hover {
+  opacity: 0.8;
+}
+
+/* Existing styles remain unchanged */
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text {
+  display: inline-block;
+}
+
+.button-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__button {
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .button-icon {
+    display: inline-block;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header__logo img {
+    height: 40px;
+  }
+
+  .header__buttons {
+    gap: 8px;
+  }
+
+  .header__button {
+    max-width: none;
+    padding: 6px 8px;
+    font-size: 16px;
+  }
+
+  .header_button--fill,
+  .header_button--border {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .header__logo {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .header__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .button-text {
+    display: none;
+  }
+  .button-icon {
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  .header_button--fill,
+  .header_button--border {
+    font-size: 14px;
+  }
+}

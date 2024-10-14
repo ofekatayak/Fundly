@@ -1,0 +1,28 @@
+/* src/screens/MyInvestments.css */
+.all-investments {
+  padding: 20px;
+  text-align: center;
+}
+
+.all-investments__search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px; /* Add space between search bar and button */
+}
+
+.toggle-view-button {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+  border: none;
+  background-color: var(--soft-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title {
+  color: var(--txtMain-color);
+}

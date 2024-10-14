@@ -1,0 +1,100 @@
+.users-table-container {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 16px; /* Increased base font size */
+}
+
+.users-table-container table {
+  color: #728f9e;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table-container th,
+.users-table-container td {
+  padding: 14px 18px; /* Slightly increased padding */
+  text-align: right;
+}
+
+.users-table-container thead tr {
+  background-color: var(--soft);
+  color: white;
+  font-size: 18px; /* Slightly larger font for headers */
+}
+
+.users-table-container tbody tr {
+  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--soft-color);
+  font-size: 18px; /* Increased from 16px */
+}
+
+.users-table-container .icon {
+  font-size: 18px; /* Increased from 16px */
+  margin-left: 12px;
+}
+
+.users-table-container .delete-button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  padding: 6px; /* Slightly increased padding */
+}
+
+.users-table-container .delete-button:hover {
+  color: #ff1a1a;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .users-table-container {
+    font-size: 14px; /* Increased from 12px for mobile */
+  }
+
+  .users-table-container table,
+  .users-table-container thead,
+  .users-table-container tbody,
+  .users-table-container th,
+  .users-table-container td,
+  .users-table-container tr {
+    display: block;
+  }
+
+  .users-table-container thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .users-table-container tr {
+    margin-bottom: 12px; /* Slightly increased */
+    border: 1px solid var(--primary-color);
+  }
+
+  .users-table-container td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .users-table-container td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .users-table-container .delete-button .notification-button{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px; 
+    background: none;
+  }
+}

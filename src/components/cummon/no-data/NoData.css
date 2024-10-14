@@ -1,0 +1,29 @@
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.no-data-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.no-data-message {
+  color: #728f9e;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .no-data-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .no-data-message {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+}

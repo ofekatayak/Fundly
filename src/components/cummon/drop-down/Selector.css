@@ -1,0 +1,14 @@
+.selector-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .select {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border-color: var(--soft-color);
+    outline: none;
+    transition: border-color 0.3s;
+  }

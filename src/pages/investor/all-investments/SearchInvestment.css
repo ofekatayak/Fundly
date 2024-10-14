@@ -1,0 +1,17 @@
+body {
+  background-color: var(--bg-color);
+}
+.all-investments {
+  padding: 20px;
+  text-align: center;
+}
+
+.all-investments__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align investment cards */
+  gap: 20px;
+}
+.title {
+  color: var(--txtMain-color);
+}

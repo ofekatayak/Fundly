@@ -1,0 +1,46 @@
+/* src/components/SearchBar.css */
+::placeholder {
+  text-align: center;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px; /* Reduced border radius for smaller size */
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.search-bar__input {
+  flex: 1;
+  height: 32px; /* Reduced height */
+  padding: 4px 40px 4px 10px; /* Adjusted padding */
+  border: none;
+  outline: none;
+  font-size: 14px; /* Slightly reduced font size */
+}
+
+.search-bar__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 45px; /* Matched to new input height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Adjust the icon size */
+.search-bar__icon svg {
+  width: 16px; /* Reduced icon size */
+  height: 16px;
+}

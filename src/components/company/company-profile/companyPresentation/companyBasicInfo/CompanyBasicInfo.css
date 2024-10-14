@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.company-details-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.info-section,
+.docs-section,
+.contact-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  color: var(--txtSoftBlack-color);
+}
+
+.info-section h2,
+.docs-section h2,
+.contact-section h2 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.info-section p,
+.docs-section p,
+.contact-section p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.info-section p strong,
+.docs-section p strong,
+.contact-section p strong {
+  font-weight: bold;
+  color: var(--txtSoftBlack-color);
+}
+
+.info-section a,
+.docs-section a,
+.contact-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.info-section a:hover,
+.docs-section a:hover,
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .company-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section,
+  .docs-section,
+  .contact-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section p,
+  .docs-section p,
+  .contact-section p {
+    width: 100%;
+    max-width: 300px; /* או ערך אחר שמתאים לעיצוב שלך */
+  }
+}

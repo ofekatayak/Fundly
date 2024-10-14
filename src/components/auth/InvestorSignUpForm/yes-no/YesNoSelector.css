@@ -1,0 +1,17 @@
+.yes-no-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.yes-no-container label {
+  margin-right: 10px;
+}
+
+.yes-no-container input[type='radio'] {
+  margin-right: 5px;
+}
+
+.yes-no-container input[type='radio']:checked + span {
+  color: var(--soft-color);
+}

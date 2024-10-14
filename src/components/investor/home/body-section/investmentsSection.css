@@ -1,0 +1,71 @@
+.investments-section {
+  padding: 40px 40px;
+  background-color: #fff;
+}
+
+.investments-section__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.investments-section__header {
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: row-reverse; /* Switches the sides of the button and title */
+}
+
+.investments-section__title {
+  font-size: 2rem;
+  color: var(--txtMain-color);
+}
+
+.invest_bttn {
+  background-color: white;
+  color: #39958c;
+  border: 2px solid #39958c;
+}
+
+/* הוספת אפקטי hover */
+.raise_bttn:hover {
+  background-color: #2c7a72;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investments-section__button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.investments-section__button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .investments-section__title {
+    font-size: 1.4rem;
+  }
+}
